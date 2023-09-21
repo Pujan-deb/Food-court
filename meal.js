@@ -18,7 +18,7 @@ show = (data) => {
     }
     data.map(item => {
         const div = document.createElement('section');
-        div.innerHTML = `<div class="bg-green-100 rounded-3xl p-2 " id="Foods">
+        div.innerHTML = `<div class="bg-green-100 rounded-3xl p-2 shadow-xl" id="Foods">
         <img src="${item.strMealThumb}" alt="" class="rounded-3xl mx-auto">
         <h3 class="my-4 text-center text-3xl font-semibold">${item.strMeal}</h3>
         <p class="my-4 text-center text-xl font-normal">A taste you'll remember.</p>
