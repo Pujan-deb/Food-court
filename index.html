@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/ea22d421bb.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body class="relative bg-sky-200">
+    <!-- <div class="w-[300px] bg-slate-200 rounded-md p-4 flex flex-col gap-4 justify-center items-center absolute top-[5rem] sm:left-28 lg:left-[33rem] hidden animate__animated animate__backInDown"
+        id="modal">
+        <div>
+            <h2 class="text-center text-green-500 font-bold text-2xl" id="Foodtitle"></h2>
+            <p class="capitalize text-center overflow-y-scroll h-[190px]" id="info"></p>
+        </div>
+
+        <div>
+            <button class="text-xl font-medium py-2 px-8 bg-sky-300 rounded-lg" id="close">close</button>
+        </div>
+    </div> -->
+    <section class="text-center my-4">
+        <input type="text" placeholder="Search all the foods here"
+            class="w-[20rem] lg:w-[34rem] p-3 border rounded-md border-green-700 outline-none" id="search-box">
+
+    </section>
+    <p class="container mx-auto text-4xl animate__infinite infinite animate__animated animate__fadeIn w-5 text-black hidden"
+        id="spinner">
+        <i class="fa-solid fa-spinner"></i>
+    </p>
+    <section
+        class="container mx-auto p-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between items-center"
+        id="maindiv">
+        <!-- <h2 class="bg-green-100"></h2> -->
+    </section>
+    <div class="container mx-auto flex justify-center items-center mb-4">
+        <button class="w-[200px] text-2xl font-medium py-2 px-4 bg-sky-300 rounded-lg hidden" id="ShowAll">Show
+            all</button>
+    </div>
+
+    <h2 class="text-center text-2xl font-semibold hidden" id="notfound">Not found please try
+        again.Example:[fish,chicken,e.t.c]</h2>
+    <!-- modal -->
+    <section class="hidden" id="modalSection">
+        <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+            <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+                    <div
+                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                            <div class="sm:flex sm:items-start">
+                                <div
+                                    class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                                    <i class="fa-solid fa-utensils"></i>
+                                </div>
+                                <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                                    <h3 class="text-xl font-semibold leading-6 text-sky-500" id="modal-title">
+                                        Deactivate
+                                        account</h3>
+                                    <div class="mt-2">
+                                        <p class="text-sm text-gray-500" id="foodDesc">Are you sure
+                                            you want to
+                                            deactivate your
+                                            account? All
+                                            of your data will be permanently removed. This action cannot be undone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row justify-center sm:px-6">
+                            <!-- <button type="button"
+                                class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button> -->
+                            <button type="button"
+                                class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+                                id="CLosemodal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="meal.js"></script>
+</body>
+
+</html>
